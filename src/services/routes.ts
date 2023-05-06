@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import { lowRiskTipsRouter } from './LowRiskTipsServices/lowRiskTips.routes';
+import { investmentRouter } from './InvestmentService/investment.routes';
 
 const router = Router();
 
-router.use('/low-risk', lowRiskTipsRouter);
+router.use('/investment', investmentRouter);
 
 export { router };

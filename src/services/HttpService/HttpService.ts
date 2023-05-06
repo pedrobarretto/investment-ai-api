@@ -1,14 +1,15 @@
 class HttpService {
   // Read this: https://platform.openai.com/docs/guides/chat/introduction
+  // messages: [{ role: 'user', content: prompt }] gpt-3.5-turbo
   async post(prompt: string) {
-    console.log(prompt);
     return fetch(`${process.env.OPENAI_API_URL}/completions`, {
       method: 'POST',
       body: JSON.stringify({
         prompt,
-        model: 'gpt-3.5-turbo',
-        temperature: 0,
-        max_tokens: 100,
+        model: 'text-davinci-003',
+        temperature: 0.7,
+        max_tokens: 500,
+        top_p: 1,
       }),
       headers: {
         Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
