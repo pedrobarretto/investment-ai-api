@@ -13,7 +13,7 @@ class CreatePrompt {
   mountPromptCrypto(value: number) {
     const formatedValue = formatRealCurrency(value);
 
-    return `Eu tenho R$ ${formatedValue} para investir em criptomoedas. Monte uma carteira de investimentos para mim, me dizendo quais moedas ou ativos comprar baseado no mercado atual.`;
+    return `Eu tenho R$ ${formatedValue} para investir em criptomoedas. Monte uma carteira de investimentos para mim, me dizendo quais moedas comprar, e sua respectiva porcentagem em minha carteira, baseada no mercado atual.`;
   }
 }
 

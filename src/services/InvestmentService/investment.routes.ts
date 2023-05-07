@@ -15,9 +15,9 @@ investmentRouter.post('/normal', async (req: Request, res: Response) => {
     timeSpent,
   });
 
-  const { choices } = await httpService.post(prompt);
+  const text = await httpService.post(prompt);
 
-  return res.status(200).json({ text: choices[0].text });
+  return res.status(200).json({ text });
 });
 
 investmentRouter.post('/crypto', async (req: Request, res: Response) => {
@@ -25,9 +25,9 @@ investmentRouter.post('/crypto', async (req: Request, res: Response) => {
 
   const prompt = createPrompt.mountPromptCrypto(value);
 
-  const { choices } = await httpService.post(prompt);
+  const text = await httpService.post(prompt);
 
-  return res.status(200).json({ text: choices[0].text });
+  return res.status(200).json({ text });
 });
 
 export { investmentRouter };
