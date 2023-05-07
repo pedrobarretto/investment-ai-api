@@ -1,7 +1,6 @@
 import { Router, Response, Request } from 'express';
 
 import { createPrompt } from '../../apps';
-// import { OpenAIMiddleware } from '../../middlewares';
 import { httpService } from '../HttpService/HttpService';
 
 const investmentRouter = Router();
