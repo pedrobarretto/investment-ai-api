@@ -1,6 +1,6 @@
 export function formatRealCurrency(value: number): string {
   // Converte o número para uma string com duas casas decimais
-  const formattedValue = value.toFixed(2);
+  const formattedValue = Number(value).toFixed(2);
 
   // Separa a parte inteira da parte decimal
   const [integerPart, decimalPart] = formattedValue.split('.');
