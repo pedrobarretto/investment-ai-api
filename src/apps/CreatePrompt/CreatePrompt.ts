@@ -15,6 +15,10 @@ class CreatePrompt {
 
     return `Eu tenho R$ ${formatedValue} para investir em criptomoedas. Monte uma carteira de investimentos para mim, me dizendo quais moedas comprar, e sua respectiva porcentagem em minha carteira, baseada no mercado atual.`;
   }
+
+  formatToHtml(text: string) {
+    return `Formate esse texto com HTML: ${text}`;
+  }
 }
 
 const createPrompt = new CreatePrompt();
